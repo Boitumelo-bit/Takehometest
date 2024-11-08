@@ -1,0 +1,102 @@
+/* Background and centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #f8cdda, #1e2a47); /* Warm gradient background */
+  font-family: 'Georgia', serif; /* Elegant font for a restaurant theme */
+}
+
+/* Form container styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; /* White background for the form */
+  padding: 40px 50px;
+  border-radius: 15px; /* Soft rounded corners */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  width: 100%;
+  max-width: 400px; /* Limit form width to 400px */
+  transition: all 0.3s ease;
+  margin: 0 20px; /* Padding for responsiveness */
+  box-sizing: border-box; /* Ensure padding doesn't affect form size */
+  animation: glowing-border 1.5s linear infinite; /* Apply glowing effect */
+}
+
+/* Form hover effect */
+form:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  width: 100%; /* Ensure label spans full width for alignment */
+  text-align: left; /* Align labels to the left */
+  letter-spacing: 1px; /* Add a bit of spacing for a stylish look */
+}
+
+/* Input fields */
+input {
+  width: 100%; /* Make inputs span the full width of the form */
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Rounded corners for inputs */
+  background-color: #f3f3f3; /* Light grey background for inputs */
+  color: #ff913793;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box; /* Include padding in the element's total width */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+input:focus {
+  border-color: #ff6f61; /* Warm coral border on focus */
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5); /* Soft glow effect */
+  outline: none;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Button styling */
+button {
+  background-color: #ff6f61; /* Warm coral button */
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+  transition: all 0.3s ease;
+  width: 100%; /* Make button span full width */
+  letter-spacing: 1px; /* Add spacing for style */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #ff5733; /* Darker coral on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-3px); /* Button lift effect */
+}
+
+/* Button active effect */
+button:active {
+  transform: translateY(1px); /* Slight down effect when clicked */
+}
+
+/* Small info text (optional) */
+p {
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}

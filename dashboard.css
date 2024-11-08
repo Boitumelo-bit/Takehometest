@@ -1,0 +1,236 @@
+/* General body styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    font-size: 14px; /* Reduced font size */
+}
+
+/* Container for all the sections */
+.dashboard-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+h2 {
+    color: black;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: rgb(247, 160, 0);
+}
+
+/* Low stock alert */
+#lowStockAlert p {
+    background-color: #ffffffb7;
+    color: #d32f2f;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    margin-bottom: 20px;
+}
+
+/* Trending items and items of the month sections */
+#trendingItems, #itemsOfTheMonth, #stockChart, .summary {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Lighter background for softer look */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Heading colors for sections */
+#trendingItems h2, #itemsOfTheMonth h2, #stockChart h2 {
+    color: #FF7043; /* Soft coral */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Image styling for trending and monthly items */
+.trending-images, .monthly-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.trending-item, .monthly-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.trending-item:hover, .monthly-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Stock table styles */
+#stockTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-out;
+}
+
+#stockTable th, #stockTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.85em; /* Reduced font size */
+    color: #333;
+}
+
+#stockTable th {
+    background-color: #FFCC80; /* Light orange */
+    color: #2a5d56; /* Soft green */
+    font-size: 1em;
+}
+
+#stockTable tbody tr:hover {
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+/* Stock circle styles */
+.stock-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.7em;
+    color: #4caf50;
+    background: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Summary section styling */
+.summary p {
+    font-size: 1em; /* Reduced font size */
+    color: #FF7043; /* Soft coral */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button styles */
+button {
+    padding: 6px 14px;
+    background-color: rgb(255, 169, 9); /* Soft coral */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #f39110; /* Darker coral */
+    transform: scale(1.05);
+}
+
+/* Fixed navigation bar styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 0; /* Fix the position */
+}
+
+/* Ensure the content area isn't hidden behind the fixed nav */
+.dashboard-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 80px 20px 20px; /* Added top margin to account for fixed navbar height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Fix for content scrolling */
+.dashboard-container {
+    height: calc(100vh - 80px); /* Adjust for the fixed nav height */
+}
+
+/* Heading colors for sections */
+#trendingItems h2, #itemsOfTheMonth h2, #stockChart h2 {
+    color: #FF7043; /* Soft coral */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated navigation link hover style */
+nav ul li a:hover {
+    color: #FF7043; /* Soft coral */
+    border-bottom: 2px solid #FF7043;
+}

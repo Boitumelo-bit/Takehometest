@@ -1,0 +1,27 @@
+table {
+    width: 60%; /* Decrease this value to make the table smaller */
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.178); /* Adjust shadow for smaller size */
+    animation: glow 1.5s infinite alternate;
+}
+
+th, td {
+    padding: 10px; /* Decrease padding for less spacious cells */
+    text-align: center;
+    border: 1px solid black;
+}
+
+th {
+    background-color:rgba(204, 122, 0, 0.281) ;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(204, 122, 0, 0.281);
+}
+
+tr:hover {
+    background-color: rgba(204, 122, 0, 0.432);
+}
+
